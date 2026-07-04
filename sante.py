@@ -322,7 +322,7 @@ else:
                 sns.scatterplot(x='PAS_mmHg', y='PAD_mmHg', hue='Cluster', data=df, palette='Set1', ax=ax)
                 st.pyplot(fig)
 
-        elif section == "5. Matrice d'Évaluation de l'IA (Q4)":
+        elif section == "5. Matrice d'Évaluation (Q4)":
             st.header(" Modélisation Prédictive Supervisée (Régression Logistique)")
             y_condition = df['PAS_mmHg'].apply(lambda pas: 1 if (pas > 140 or pas < 95) else 0)
             if len(df) >= 10 and y_condition.nunique() == 2:
@@ -419,7 +419,6 @@ else:
             st.markdown("---")
             st.markdown("###  Conclusion du Rapport")
             st.markdown("---")
-            st.markdown("###  Conclusion Générale")
             st.write("""
             La réalisation de cette application illustre l'intégration synergique de l'informatique et de la statistique, au cœur des objectifs pédagogiques de l'**UE INF232**. En articulant gestion de bases de données réactive, analyse exploratoire et modélisation algorithmique sous **Streamlit**, ce projet matérialise un outil d'aide à la décision clinique robuste et reproductible.
             
